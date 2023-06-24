@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="./assets/styles/css/indexStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="loadingLoginPage();">
+    <div class="main-page">
+      <form action="#" class="login-form">
+        <img
+          src="./assets/img/watchable.png"
+          alt=""
+          width="200px"
+          class="logo"
+        />
+        <p id="wrongText">
+          your username or <br />
+          password is wrong
+        </p>
+        <label for="userName">Enter your username:</label>
+        <input type="text" name="userName" id="userName" />
+        <label for="password">Enter your password:</label>
+        <input type="password" name="password" id="password" />
+        <a href="#" class="stay-signed-in" onclick="signedInHandler()">
+          <input type="checkbox" name="staySignedIn" id="staySignedIn" />
+          <label for="staySignedIn">Do you wants to stayed sign in?</label>
+        </a>
+        <input type="submit" onclick="formLoginSubmission(event)" />
+        <a href="./assets/pages/signUpPage.html" class="sign-up"
+          >let's make your account</a
+        >
+      </form>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/scripts/indexScript.js"></script>
+  </body>
+</html>

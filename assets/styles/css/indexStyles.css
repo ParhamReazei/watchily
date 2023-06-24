@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: #1b2b2b;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-page p {
+  color: lime;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-page a {
+  font-size: smaller;
+  color: #1b2b2b;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #7a5780;
+  padding: 15%;
+  border-radius: 22px;
+  gap: 0.25rem;
+  margin: auto;
+}
+
+input[type="password"],
+input[type="text"] {
+  background-color: #b04d35;
+  border: 2px solid #421435;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  background-color: #b04d35;
+  border: 2px solid #421435;
+  color: #1b2b2b;
+  border-radius: 9999px;
+  font-size: 15px;
+  align-self: flex-end;
+  padding: 4px 8px;
+}
+
+input[type="submit"]:hover {
+  background-color: #421435;
+  color: white;
+  border-color: #b04d35;
+}
+
+.logo {
+  padding-bottom: 10px;
+}
+
+.stay-signed-in {
+  font-size: smaller;
+  color: #1b2b2b;
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=indexStyles.css.map */

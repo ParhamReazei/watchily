@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: #1b2b2b;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top {
+  height: 35vh;
+  margin: auto;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #7a5780;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  -ms-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+.top.small {
+  height: 100px;
+  display: block;
+}
+.top.small img {
+  top: 15px;
+  margin-left: 100px;
+  height: 100px;
+}
+.top.small p {
+  display: none;
+}
+
+.library.small {
+  margin-top: 250px;
+}
+
+.add-movie {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background-color: #b04d35;
+  border: 2px solid #421435;
+  color: #1b2b2b;
+  font-size: 15px;
+}
+
+.add-movie:hover {
+  background-color: #421435;
+  color: white;
+  border-color: #b04d35;
+}
+
+.library {
+  margin: 44px;
+  margin-top: 36vh;
+  margin-inline: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #8f5e78;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 1rem;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 60px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  background-color: #a85e45;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  font-size: smaller;
+}
+
+.movie img {
+  align-self: center;
+  width: 100px;
+}
+
+.modal .modal-content {
+  padding: 15px;
+}
+.modal .modal__choose-file {
+  background: #000;
+}
+
+.not-found {
+  color: #8f5e78;
+}
+
+.loading {
+  width: 17px;
+  height: 15px;
+  display: flex;
+  gap: 1px;
+}
+
+.inner-loading-first {
+  width: 5px;
+  background-color: #8f5e78;
+  align-self: flex-end;
+  animation: firstLoading 1s infinite;
+}
+
+@keyframes firstLoading {
+  0% {
+    height: 100%;
+  }
+  25% {
+    height: 50%;
+  }
+  50% {
+    height: 0%;
+  }
+  75% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.inner-loading-second {
+  width: 5px;
+  background-color: #8f5e78;
+  align-self: flex-end;
+  animation: secondLoading 1s infinite;
+}
+
+@keyframes secondLoading {
+  0% {
+    height: 50%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 50%;
+  }
+  75% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.inner-loading-third {
+  width: 5px;
+  background-color: #8f5e78;
+  align-self: flex-end;
+  animation: thirdLoading 1s infinite;
+}
+
+@keyframes thirdLoading {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 50%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.modal-box {
+  background-color: #1b2b2b;
+  border: 3px solid #7a5780;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aacdd3;
+}
+.modal-box button {
+  border: 1px solid #7a5780;
+  background-color: #b04d35;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  margin-top: 1rem;
+}
+.modal-box button:hover {
+  background-color: #421435;
+  border-color: #b04d35;
+  color: white;
+}
+.modal-box input {
+  background-color: #a85e45;
+  border: 2px solid #421435;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.log-out {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background-color: #b04d35;
+  border: 2px solid #421435;
+  color: #1b2b2b;
+  font-size: 15px;
+  z-index: 100;
+}
+
+.log-out:hover {
+  background-color: #421435;
+  color: white;
+  border-color: #b04d35;
+}
+
+.modal p {
+  color: lime;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.edit-button {
+  width: 25px !important;
+  height: 25px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 999px;
+  background-color: #8f5e78;
+}
+
+.movie {
+  position: relative;
+}
+
+.movie:hover .edit-button {
+  display: block;
+}
+
+/*# sourceMappingURL=homeStyles.css.map */
